@@ -1,39 +1,62 @@
 {
   "name": "shadcn-ui",
-  "private": true,
-  "version": "0.0.0",
+  "private": false,
+  "version": "0.0.13",
   "type": "module",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js",
+      "types": "./dist/index.d.ts",
+      "styles": "./dist/style.css"
+    },
+    "./css": "./dist/style.css"
+  },
+  "files": [
+    "/dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "build": "tsc && vite build && npm run build:styles",
+    "build:styles": "postcss ./src/index.css -o ./dist/style.css",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
+  },
+  "peerDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "dependencies": {
+    "@radix-ui/react-icons": "^1.3.0",
     "@radix-ui/react-slot": "^1.0.2",
+    "@vitejs/plugin-react": "^4.3.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
-    "lucide-react": "^0.394.0",
-    "react": "^18.2.0",
+    "postcss-cli": "^11.0.0",
+    "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "tailwind-merge": "^2.3.0",
+    "tailwindcss": "^3.4.4",
     "tailwindcss-animate": "^1.0.7",
-    "vite-plugin-dts": "^3.9.1"
+    "yarn": "^1.22.22"
   },
   "devDependencies": {
     "@types/node": "^20.14.2",
-    "@types/react": "^18.2.66",
-    "@types/react-dom": "^18.2.22",
-    "@typescript-eslint/eslint-plugin": "^7.2.0",
-    "@typescript-eslint/parser": "^7.2.0",
-    "@vitejs/plugin-react": "^4.2.1",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
     "autoprefixer": "^10.4.19",
-    "eslint": "^8.57.0",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.6",
     "postcss": "^8.4.38",
-    "tailwindcss": "^3.4.4",
-    "typescript": "^5.2.2",
-    "vite": "^5.2.0"
-  }
+    "typescript": "^5.4.5",
+    "vite": "^5.2.13",
+    "vite-plugin-dts": "^3.9.1"
+  },
+  "description": "yarn ",
+  "repository": "https://github.com/y-shoraka/Shadcn-UI.git",
+  "author": "y-shoraka <shorakayasaman@gmail.com>",
+  "license": "MIT"
 }
