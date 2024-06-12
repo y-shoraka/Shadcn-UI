@@ -10,7 +10,7 @@ export interface WitroButtonProps
   className?: string;
   fullWidth?: boolean;
 }
-function Button({
+export function Button({
   variant,
   size,
   children,
@@ -50,4 +50,3 @@ function Button({
   );
 }
 
-export default Button;

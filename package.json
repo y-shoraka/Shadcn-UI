@@ -1,5 +1,5 @@
 {
-  "name": "shadcn-ui",
+  "name": "witro-shadcn-ui",
   "private": false,
   "version": "0.0.13",
   "type": "module",
@@ -56,7 +56,14 @@
     "vite-plugin-dts": "^3.9.1"
   },
   "description": "yarn ",
-  "repository": "https://github.com/y-shoraka/Shadcn-UI.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/y-shoraka/Shadcn-UI.git"
+  },
   "author": "y-shoraka <shorakayasaman@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/y-shoraka/Shadcn-UI/issues"
+  },
+  "homepage": "https://github.com/y-shoraka/Shadcn-UI#readme"
 }
