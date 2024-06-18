@@ -1,1 +1,1 @@
-export { Button} from '@/witro-components/button/button.component'
+export { Button } from '@/witro-components/button/button.component'
