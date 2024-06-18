@@ -10,10 +10,10 @@ program
   .action((component) => {
     const templatesDir = path.resolve(__dirname, '../templates');
     const targetDir = process.cwd(); // Current working directory
-
+    console.log(`Adding component: ${component}`);
     if (component.toLowerCase() === 'button') {
-      const srcFile = path.join(templatesDir, 'Button.js');
-      const destFile = path.join(targetDir, 'Button.js');
+      const srcFile = path.join(templatesDir, 'Button.tsx');
+      const destFile = path.join(targetDir, 'Button.tsx');
       if (!fs.existsSync(destFile)) {
         fs.copyFileSync(srcFile, destFile);
         console.log(`Copied Button.js to your project.`);
