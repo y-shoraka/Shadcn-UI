@@ -19,7 +19,7 @@
     "/dist"
   ],
   "bin": {  
-    "my-library-cli": "./bin/index.js"  
+    "my-library-cli": "./cli/index.js"  
   },
   "publishConfig": {
     "access": "public"
