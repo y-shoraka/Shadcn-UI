@@ -1,10 +1,8 @@
 #!/usr/bin/env node
-import fs from 'fs'
-import path from 'path' 
- import { program } from 'commander';
-// const fs = require('fs');
-// const path = require('path');
-// const { program } = require('commander');
+
+const fs = require('fs');
+const path = require('path');
+const { program } = require('commander');
 
 program
   .command('add <component>')
@@ -14,8 +12,8 @@ program
     const targetDir = process.cwd(); // Current working directory
     console.log(`Adding component: ${component}`);
     if (component.toLowerCase() === 'button') {
-      const srcFile = path.join(templatesDir, 'Button.tsx');
-      const destFile = path.join(targetDir, 'Button.tsx');
+      const srcFile = path.join(templatesDir, 'button.tsx');
+      const destFile = path.join(targetDir, 'button.tsx');
       if (!fs.existsSync(destFile)) {
         fs.copyFileSync(srcFile, destFile);
         console.log(`Copied Button.js to your project.`);
