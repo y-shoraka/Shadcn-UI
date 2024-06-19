@@ -10,7 +10,7 @@ program
   .action((component) => {
     const templatesDir = path.resolve(__dirname, '..', 'templates'); // Assuming templates one level up
     const targetDir = process.cwd(); // User's current working directory (likely their project root)
-console.log(targetDir)
+console.log(templatesDir)
     if (component.toLowerCase() === 'button') {
       const srcFile = path.join(templatesDir, 'button.tsx'); // Path to button.tsx in templates
       const targetFile = path.join(targetDir, 'src', 'button.tsx'); // Target path in user's project (src folder)
