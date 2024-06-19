@@ -8,7 +8,7 @@ program
   .command('add <component>')
   .description('Add a component to your project')
   .action((component) => {
-    const templatesDir = path.resolve(__dirname, '../templates');
+    const templatesDir = path.resolve(__dirname, '..', 'templates');
     const targetDir = process.cwd(); // Current working directory
     console.log(`Adding component: ${component}`);
     if (component.toLowerCase() === 'button') {
